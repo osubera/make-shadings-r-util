@@ -20,7 +20,7 @@
 make.shadings <- function(n, density=NA, angle=NA, verbose=FALSE) {
   shadings <- list(density=NULL, angle=NULL)
 
-  if(is.na(density) && is.na(angle)) return(shadings)
+  if(any(is.na(density)) && any(is.na(angle))) return(shadings)
 
   label <- c('density', 'angle')
   start <- c(12, 10)
